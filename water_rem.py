@@ -14,13 +14,13 @@ def get_reminder_interval(water_intake):
     else:
         return "Every 2 hours"
 
-# def recommend_water_temperature(age):
-#     if age > 55:
-#         return "Lukewarm water recommended"
-#     elif age < 30:
-#         return "Cool water recommended"
-#     else:
-#         return "Room temperature water recommended"
+def recommend_water_temperature(age):
+    if age > 55:
+        return "Lukewarm water recommended"
+    elif age < 30:
+        return "Cool water recommended"
+    else:
+        return "Room temperature water recommended"
 
 def main():
     try:
@@ -36,11 +36,11 @@ def main():
 
         water_needed = calculate_water_intake(weight, age)
         interval = get_reminder_interval(water_needed)
-        # temp_advice = recommend_water_temperature(age)
+        temp_advice = recommend_water_temperature(age)
 
         print(f"\n✅ Recommended daily water intake: {water_needed} liters")
         print(f"🔔 Reminder interval: {interval}")
-        # print(f"💧 Water temperature advice: {temp_advice}")
+        print(f"💧 Water temperature advice: {temp_advice}")
 
     except ValueError as ve:
         print(f"❌ Error: {ve}")
